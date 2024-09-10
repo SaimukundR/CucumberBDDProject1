@@ -1,12 +1,20 @@
 package page.objects;
 
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
 import pages.base.BasePage;
 
 public class NewCarsPage  extends BasePage{
 	
+	public NewCarsPage() throws IOException {
+        super();  // Calls BasePage constructor
+        PageFactory.initElements(driver, this);  // Initialize elements using PageFactory
+    }
 	
-	
-	public KiaCarPage gotoKia() {
+	public KiaCarPage gotoKia() throws IOException {
 		
 		click("kia_LINK");
 		
@@ -15,7 +23,7 @@ public class NewCarsPage  extends BasePage{
 	}
 	
 	
-	public BMWCarPage gotoBMW() {
+	public BMWCarPage gotoBMW() throws IOException {
 		
 		click("bmw_LINK");
 		
@@ -24,7 +32,9 @@ public class NewCarsPage  extends BasePage{
 	}
 	
 	
-	public ToyotaCarPage gotoToyota() {
+	public ToyotaCarPage gotoToyota() throws IOException {
+		
+	
 		
 		click("toyota_LINK");
 		
@@ -32,7 +42,7 @@ public class NewCarsPage  extends BasePage{
 	}
 	
 	
-	public HondaCarPage gotoHonda() {
+	public HondaCarPage gotoHonda() throws IOException {
 		
 		
 		click("honda_LINK");

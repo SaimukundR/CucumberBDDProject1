@@ -35,7 +35,7 @@ public class BasePage {
 			mouseOverElement = driver.findElement(By.linkText(SeleniumDriver.OR.getProperty(locator)));
 		}
 
-		new Actions(driver).moveToElement(mouseOverElement).perform();
+		new Actions(driver).moveToElement(mouseOverElement).build().perform();
 
 	}
 

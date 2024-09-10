@@ -11,13 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumDriver {
-	
-	
-	
-	
 	
 	private static SeleniumDriver seleniumDriver;
 	
@@ -66,12 +61,10 @@ public class SeleniumDriver {
 		
 		if(config.getProperty("browser").equals("chrome")) {
 			
-			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			
 		}else if(config.getProperty("browser").equals("firefox")) {
 			
-			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			
 		}

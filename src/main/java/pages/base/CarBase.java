@@ -4,8 +4,9 @@ public class CarBase {
 
 	public String getCarTitle() {
 
-		return BasePage.getText("carTitle_XPATH");
+		return BasePage.getText("carTitle_CSS");
 
 	}
+
 
 }

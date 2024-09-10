@@ -1,5 +1,7 @@
 package steps;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
 import io.cucumber.java.en.And;
@@ -32,14 +34,14 @@ public class CarWaleSteps {
 	   
 	}
 	@Then("user clicks on Findnewcars")
-	public void user_clicks_on_findnewcars() {
+	public void user_clicks_on_findnewcars() throws IOException {
 		
-		car = home.clickFindNewCars();
+		car= home.clickFindNewCars();
 		
 	   
 	}
 	@And("user clicks on {string} car")
-	public void user_clicks_on_car(String carBrand) {
+	public void user_clicks_on_car(String carBrand) throws IOException {
 		
 		if(carBrand.equals("Toyota")) {
 			

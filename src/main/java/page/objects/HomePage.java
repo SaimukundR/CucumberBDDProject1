@@ -1,19 +1,27 @@
 package page.objects;
 
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
 import pages.base.BasePage;
 
 public class HomePage extends BasePage{
-	
+	public HomePage() {
+        super();  // Calls BasePage constructor
+        PageFactory.initElements(driver, this);  // Initialize elements using PageFactory
+    }
 	
 	
 	public void mouseOverNewCars() {
 		
-		mouseOver("newCarMenu_XPATH");
+		click("newCarMenu_XPATH");
 		
 	}
 	
 	
-	public NewCarsPage clickFindNewCars() {
+	public NewCarsPage clickFindNewCars() throws IOException {
 		
 		click("findNewCars_XPATH");
 		
