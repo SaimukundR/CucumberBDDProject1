@@ -21,5 +21,5 @@ Feature: Searching New Cars
     Examples: 
       | carBrand | carTitle    |
       | Toyota   | Toyota Cars |
-      | Kia      | Kia Cars |
+      | Kia      | Kia Cars    |
     
